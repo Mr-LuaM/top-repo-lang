@@ -1,6 +1,8 @@
 {
   "name": "top-repo-lang",
   "version": "1.0.0",
+  "description": "A TypeScript tool that finds the top GitHub repository by language size using the GitHub API.",
+  "author": "Mark Lua <marklua599@gmail.com>",
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
