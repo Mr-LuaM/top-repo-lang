@@ -24,7 +24,7 @@ A TypeScript script that finds your most significant public GitHub repository ba
 🛠️ Setup & Installation
 ---------------------------
 1. Clone the repository:
-   git clone https://github.com/your-username/top-repo-lang.git
+   git clone https://github.com/Mr-LuaM/top-repo-lang.git
    cd top-repo-lang
 
 2. Install dependencies:
