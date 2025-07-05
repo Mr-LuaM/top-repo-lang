@@ -1,9 +1,8 @@
 import dotenv from "dotenv";
-
 dotenv.config();
 
 export const CONFIG = {
-  GITHUB_USERNAME: "Mr-LuaM", // change as needed
-  TARGET_LANGUAGE: "Python", // change as needed
+  GITHUB_USERNAME: "Mr-LuaM",
+  TARGET_LANGUAGES: ["JavaScript", "Python", "PHP"], // ← now an array!
   GITHUB_TOKEN: process.env.GITHUB_TOKEN || "",
 };
