@@ -8,7 +8,8 @@ A TypeScript script that finds your most significant public GitHub repository ba
 ---------------------------
 - Fetches up to 100 public repositories for a user.
 - Inspects language usage per repo via GitHub’s languages_url.
-- Finds the top repository (by byte size) for your target language.
+- Finds the top 3 repositories (by byte size) for each specified language.
+- Supports analyzing multiple programming languages in one run.
 - Supports authentication via GitHub Personal Access Token (PAT) for higher rate limits or private repos (optional).
 
 ---------------------------
@@ -50,7 +51,7 @@ Edit `src/config.ts` to set your GitHub username and the language to search:
 
 export const CONFIG = {
   GITHUB_USERNAME: "Mr-LuaM",
-  TARGET_LANGUAGE: "JavaScript",
+  TARGET_LANGUAGES: ["JavaScript", "Python", "TypeScript"], // Analyze multiple languages
   GITHUB_TOKEN: process.env.GITHUB_TOKEN || "",
 };
 
@@ -60,8 +61,17 @@ export const CONFIG = {
 npm start
 
 Example output:
-🏆 Top repo for "JavaScript":
-📦 NewsPortal — 17,895 bytes
+🏆 Top 3 repos for "JavaScript":
+
+🔹 #1: NewsPortal — 17,895 bytes
+🔹 #2: VoPet — 12,430 bytes
+🔹 #3: Portfolio — 9,501 bytes
+
+🏆 Top 3 repos for "Python":
+
+🔹 #1: SentimentAPI — 22,480 bytes
+🔹 #2: FlaskAdmin — 8,214 bytes
+
 
 ---------------------------
 🗂️ Project Structure
